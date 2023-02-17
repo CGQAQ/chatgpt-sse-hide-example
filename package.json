@@ -1,0 +1,11 @@
+{
+  "name": "server-sent-event-example",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "CGQAQ <m.jason.liu@outlook.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

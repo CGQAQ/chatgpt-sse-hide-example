@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<body>
+  <h1>SSE: <span id="state"></span></h1>
+  <h3>Data: <span id="data"></span></h3>
+
+
+  <script type="module">
+    console.log("fetching...");
+    let res = await fetch('/countdown', {method: 'POST', headers: {'Accept': 'text/event-stream',}});
+
+    // read body as stream
+    console.log("reading...");
+    let reader = res.body.getReader();
+
+    // read stream
+    console.log("reading stream...");
+    while (true) {
+      let {done, value} = await reader.read();
+      if (done) {
+        console.log("done");
+        break;
+      }
+
+      apply(value);
+    }
+
+    function apply(input) {
+      const decoder = new TextDecoder("utf-8");
+      const raw = decoder.decode(input);
+
+      let ev, data;
+      raw.split("\n").forEach(line => {
+        const [key, value] = line.split(":");
+
+        if (key === "event") {
+          ev = value;
+          console.log("event", value);
+        } else if (key === "data") {
+          data = value;
+          console.log("data", value);
+        }
+      });
+
+      if (ev.trim() === "countdown" && data) {
+          document.getElementById("data").innerHTML = data;
+      }
+    } 
+  </script>
+</body>
+</html>

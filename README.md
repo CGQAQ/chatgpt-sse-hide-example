@@ -15,5 +15,5 @@
 [phodal]: https://github.com/phodal
 [webkit eventsource]: https://github.com/WebKit/webkit/blob/main/Source/WebCore/page/EventSource.cpp#L371-L388
 [sse]: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events
-[fetch]: https://github.com/CGQAQ/server-sent-event-example/blob/b5f673ad57a0b987291f9eca4ef35e67e1b6f479/index.html#L11
+[fetch]: https://github.com/CGQAQ/chatgpt-sse-hide-example/blob/b5f673ad57a0b987291f9eca4ef35e67e1b6f479/index.html#L11
 [spec]: https://html.spec.whatwg.org/multipage/server-sent-events.html#event-stream-interpretation

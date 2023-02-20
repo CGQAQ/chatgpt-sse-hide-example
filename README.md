@@ -9,7 +9,7 @@
 ![image](https://user-images.githubusercontent.com/15936231/219986725-82690528-ba21-4949-8383-b4e46f2e9b5c.png)
 
 
-最后经过研究发现其实服务端并没有进行什么骚操作，只是浏览器端使用了[server-sent-event(sse)][sse], 但是没有用标准的 EventSource，而是自己fetch，只不过 `request header` 加上了 ['Accept': 'text/event-stream'][fetch].
+最后经过研究发现其实服务端并没有进行什么骚操作，只是浏览器端使用了[server-sent-event(sse)][sse], 但是没有用标准的 EventSource，而是自己fetch，只不过 `request header` 加上了 ['Accept': 'text/event-stream'][fetch]. 具体操作可以看本仓库示例
 
 
 [phodal]: https://github.com/phodal

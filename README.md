@@ -1,4 +1,4 @@
-# ChatGPT的回答的响应看不到的原理及例子
+# chatgpt网页版看不到响应数据的原理及例子
 
 如图：
 ![image](https://user-images.githubusercontent.com/15936231/219986461-790833d3-079e-4176-a08f-e85b630e74bd.png)
